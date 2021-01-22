@@ -1,0 +1,567 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DDDCEFA6-FC6B-455D-BE9D-27A6F88694D8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Measuring</RootNamespace>
+    <AssemblyName>Measuring</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Core, Version=1.10.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9" />
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>D:\Курсовая БД\Cycle commission_v3\Cycle_commission\Cycle_commission\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
+      <HintPath>D:\Курсовая БД\Cycle commission_v3\Cycle_commission\Cycle_commission\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip">
+      <HintPath>D:\Программа\Исходники\proga\WindowsFormsApplication13\WindowsFormsApplication13\bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>D:\Курсовая БД\Cycle commission_v3\Cycle_commission\Cycle_commission\bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Add_adres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_adres.Designer.cs">
+      <DependentUpon>Add_adres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_means.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_means.Designer.cs">
+      <DependentUpon>Add_means.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_name_of_measuring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_name_of_measuring.Designer.cs">
+      <DependentUpon>Add_name_of_measuring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_responsible.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_responsible.Designer.cs">
+      <DependentUpon>Add_responsible.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_result.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_result.Designer.cs">
+      <DependentUpon>Add_result.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_type_of_measring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_type_of_measring.Designer.cs">
+      <DependentUpon>Add_type_of_measring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_varification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_varification.Designer.cs">
+      <DependentUpon>Add_varification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_witness.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_witness.Designer.cs">
+      <DependentUpon>Add_witness.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adres.Designer.cs">
+      <DependentUpon>Adres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_position.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_position.Designer.cs">
+      <DependentUpon>Add_position.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Change_adres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Change_adres.Designer.cs">
+      <DependentUpon>Change_adres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Change_means.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Change_means.Designer.cs">
+      <DependentUpon>Change_means.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Change_name_of_measuring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Change_name_of_measuring.Designer.cs">
+      <DependentUpon>Change_name_of_measuring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Change_position.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Change_position.Designer.cs">
+      <DependentUpon>Change_position.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Change_responsible.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Change_responsible.Designer.cs">
+      <DependentUpon>Change_responsible.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Change_result.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Change_result.Designer.cs">
+      <DependentUpon>Change_result.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Change_type_of_measuring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Change_type_of_measuring.Designer.cs">
+      <DependentUpon>Change_type_of_measuring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Change_verification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Change_verification.Designer.cs">
+      <DependentUpon>Change_verification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Change_witness.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Change_witness.Designer.cs">
+      <DependentUpon>Change_witness.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Graph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Graph.Designer.cs">
+      <DependentUpon>Graph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inquiries_for_means.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inquiries_for_means.Designer.cs">
+      <DependentUpon>inquiries_for_means.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Means.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Means.Designer.cs">
+      <DependentUpon>Means.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MeasuringDataSet.cs">
+      <DependentUpon>MeasuringDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MeasuringDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MeasuringDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Name_of_measuring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Name_of_measuring.Designer.cs">
+      <DependentUpon>Name_of_measuring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organization.Designer.cs">
+      <DependentUpon>Organization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Position.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Position.Designer.cs">
+      <DependentUpon>Position.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print_reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Print_reports.Designer.cs">
+      <DependentUpon>Print_reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print_verification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Print_verification.Designer.cs">
+      <DependentUpon>Print_verification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Responsible.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Responsible.Designer.cs">
+      <DependentUpon>Responsible.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Result.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Result.Designer.cs">
+      <DependentUpon>Result.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppSetting.cs" />
+    <Compile Include="Measuring_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Measuring_form.Designer.cs">
+      <DependentUpon>Measuring_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlHelper.cs" />
+    <Compile Include="Base_Selection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base_Selection.Designer.cs">
+      <DependentUpon>Base_Selection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="type_of_measuring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="type_of_measuring.Designer.cs">
+      <DependentUpon>type_of_measuring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Verification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Verification.Designer.cs">
+      <DependentUpon>Verification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="witness.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="witness.Designer.cs">
+      <DependentUpon>witness.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Add_adres.resx">
+      <DependentUpon>Add_adres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_means.resx">
+      <DependentUpon>Add_means.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_name_of_measuring.resx">
+      <DependentUpon>Add_name_of_measuring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_responsible.resx">
+      <DependentUpon>Add_responsible.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_result.resx">
+      <DependentUpon>Add_result.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_type_of_measring.resx">
+      <DependentUpon>Add_type_of_measring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_varification.resx">
+      <DependentUpon>Add_varification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_witness.resx">
+      <DependentUpon>Add_witness.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adres.resx">
+      <DependentUpon>Adres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_position.resx">
+      <DependentUpon>Add_position.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Books.rdlc" />
+    <EmbeddedResource Include="Change_adres.resx">
+      <DependentUpon>Change_adres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Change_means.resx">
+      <DependentUpon>Change_means.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Change_name_of_measuring.resx">
+      <DependentUpon>Change_name_of_measuring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Change_position.resx">
+      <DependentUpon>Change_position.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Change_responsible.resx">
+      <DependentUpon>Change_responsible.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Change_result.resx">
+      <DependentUpon>Change_result.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Change_type_of_measuring.resx">
+      <DependentUpon>Change_type_of_measuring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Change_verification.resx">
+      <DependentUpon>Change_verification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Change_witness.resx">
+      <DependentUpon>Change_witness.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Graph.resx">
+      <DependentUpon>Graph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Group_means_date.rdlc" />
+    <EmbeddedResource Include="Group_means_date_type.rdlc" />
+    <EmbeddedResource Include="inquiries_for_means.resx">
+      <DependentUpon>inquiries_for_means.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Means_date_name_group.rdlc" />
+    <EmbeddedResource Include="Means.resx">
+      <DependentUpon>Means.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Means_date_name.rdlc" />
+    <EmbeddedResource Include="Means_place.rdlc" />
+    <EmbeddedResource Include="Means_place_name.rdlc" />
+    <EmbeddedResource Include="Name_of_measuring.resx">
+      <DependentUpon>Name_of_measuring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="On_the_verification.rdlc" />
+    <EmbeddedResource Include="Organization.resx">
+      <DependentUpon>Organization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Position.resx">
+      <DependentUpon>Position.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Means_date.rdlc" />
+    <EmbeddedResource Include="Print_reports.resx">
+      <DependentUpon>Print_reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Means_date_type.rdlc" />
+    <EmbeddedResource Include="Print_verification.resx">
+      <DependentUpon>Print_verification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Responsible.rdlc" />
+    <EmbeddedResource Include="Responsible.resx">
+      <DependentUpon>Responsible.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Responsible_name.rdlc" />
+    <EmbeddedResource Include="Result.resx">
+      <DependentUpon>Result.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base_Selection.resx">
+      <DependentUpon>Base_Selection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Measuring_form.resx">
+      <DependentUpon>Measuring_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="type_of_measuring.resx">
+      <DependentUpon>type_of_measuring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Verification.resx">
+      <DependentUpon>Verification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Verification_drop.rdlc" />
+    <EmbeddedResource Include="Verification_result.rdlc" />
+    <EmbeddedResource Include="witness.resx">
+      <DependentUpon>witness.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="MeasuringDataSet.xsc">
+      <DependentUpon>MeasuringDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MeasuringDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MeasuringDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MeasuringDataSet.xss">
+      <DependentUpon>MeasuringDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Заставка.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdown_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\server_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caliper_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magazine_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\portrait_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\administrator_male_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\place_marker_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map_marker_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\type_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pass_fail_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\school_director_male_skin_type_4_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opened_folder_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\change_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\available_updates_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear_search_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_40px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time_machine_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Заставка1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\detective_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\organization_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\place_marker_40px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graph_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moleskine_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\automation_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
